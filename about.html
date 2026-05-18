@@ -9,13 +9,21 @@
     <link rel="icon" type="image/png" href="./assets/github.png">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Sobre Mim | Luiz Miguel</title>
+    <script src="./i18n.js"></script>
 </head>
 <body>
     <header class="cabecalho">
-        <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__link" href="index.html">Home</a>
-            <a class="cabecalho__menu__link" href="about.html">Sobre Mim</a>
-        </nav>
+        <a href="index.html" class="cabecalho__logo">LM</a>
+        <div style="display: flex; align-items: center; gap: 2rem;">
+            <nav class="cabecalho__menu">
+                <a class="cabecalho__menu__link" href="index.html" data-i18n="home">Home</a>
+                <a class="cabecalho__menu__link" href="about.html" data-i18n="sobre">Sobre Mim</a>
+            </nav>
+            <div class="language-switcher">
+                <button class="language-switcher__btn language-switcher__btn--active" data-lang="pt" onclick="setLanguage('pt')">PT</button>
+                <button class="language-switcher__btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+            </div>
+        </div>
     </header>
     <main class="apresentacao apresentacao--sobre">
         <section class="apresentacao__conteudo apresentacao__conteudo--sobre">
@@ -116,7 +124,7 @@
         </section>
     </main>
     <footer class="rodape">
-        <p>Desenvolvido por Luiz Miguel - 2024</p>
+        <p data-i18n="footer">Desenvolvido por Luiz Miguel - 2024</p>
     </footer>
 </body>
 </html>

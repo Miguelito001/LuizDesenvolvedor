@@ -12,35 +12,42 @@
     <link rel="icon" type="image/png" href="./assets/github.png">
     <title>Luiz Miguel | Engenheiro de Software</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="./i18n.js"></script>
 </head>
 
 <body>
     <header class="cabecalho">
         <a href="#home" class="cabecalho__logo">LM</a>
-        <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__link" href="#home">Home</a>
-            <a class="cabecalho__menu__link" href="#sobre">Sobre</a>
-            <a class="cabecalho__menu__link" href="#habilidades">Habilidades</a>
-            <a class="cabecalho__menu__link" href="#projetos">Projetos</a>
-            <a class="cabecalho__menu__link" href="#contato">Contato</a>
-        </nav>
+        <div style="display: flex; align-items: center; gap: 2rem;">
+            <nav class="cabecalho__menu">
+                <a class="cabecalho__menu__link" href="#home" data-i18n="home">Home</a>
+                <a class="cabecalho__menu__link" href="#sobre" data-i18n="sobre">Sobre</a>
+                <a class="cabecalho__menu__link" href="#habilidades" data-i18n="habilidades">Habilidades</a>
+                <a class="cabecalho__menu__link" href="#projetos" data-i18n="projetos">Projetos</a>
+                <a class="cabecalho__menu__link" href="#contato" data-i18n="contato">Contato</a>
+            </nav>
+            <div class="language-switcher">
+                <button class="language-switcher__btn language-switcher__btn--active" data-lang="pt" onclick="setLanguage('pt')">PT</button>
+                <button class="language-switcher__btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+            </div>
+        </div>
     </header>
 
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero__conteudo">
-                <p class="hero__saudacao">Ola, eu sou</p>
+                <p class="hero__saudacao" data-i18n="heroGreeting">Ola, eu sou</p>
                 <h1 class="hero__titulo">Luiz Miguel</h1>
-                <h2 class="hero__subtitulo">Engenheiro de Software</h2>
-                <p class="hero__descricao">
+                <h2 class="hero__subtitulo" data-i18n="heroSubtitle">Engenheiro de Software</h2>
+                <p class="hero__descricao" data-i18n="heroDescription">
                     Desenvolvedor na <span class="destaque">Betha Sistemas</span>.
                     Apaixonado por tecnologia e desenvolvimento de software.
                 </p>
-                <p class="hero__localizacao">Turvo, Santa Catarina - Brasil</p>
+                <p class="hero__localizacao" data-i18n="heroLocation">Turvo, Santa Catarina - Brasil</p>
                 <div class="hero__botoes">
-                    <a href="#projetos" class="botao botao--primario">Ver Projetos</a>
-                    <a href="#contato" class="botao botao--secundario">Contato</a>
+                    <a href="#projetos" class="botao botao--primario" data-i18n="viewProjects">Ver Projetos</a>
+                    <a href="#contato" class="botao botao--secundario" data-i18n="contactBtn">Contato</a>
                 </div>
             </div>
             <div class="hero__visual">
@@ -56,7 +63,7 @@
                         <p><span class="terminal__prompt">$</span> cat skills.txt</p>
                         <p class="terminal__output">JavaScript, Java, C#, SQL...</p>
                         <p><span class="terminal__prompt">$</span> echo $STATUS</p>
-                        <p class="terminal__output terminal__output--green">Disponivel para oportunidades</p>
+                        <p class="terminal__output terminal__output--green" data-i18n="availableForOpportunities">Disponivel para oportunidades</p>
                         <p><span class="terminal__prompt">$</span> <span class="terminal__cursor">_</span></p>
                     </div>
                 </div>
@@ -66,16 +73,16 @@
         <!-- Sobre Section -->
         <section id="sobre" class="secao">
             <div class="secao__container">
-                <h2 class="secao__titulo">Sobre Mim</h2>
+                <h2 class="secao__titulo" data-i18n="aboutTitle">Sobre Mim</h2>
                 <div class="sobre__grid">
                     <div class="sobre__texto">
-                        <p>
+                        <p data-i18n="aboutText1">
                             Meu nome e Luiz Miguel e sou Desenvolvedor de Software com forte interesse em videogames,
                             atualmente morando em Turvo. Minha paixao por videogames me levou a escolher a engenharia de
                             software
                             como minha area de estudo.
                         </p>
-                        <p>
+                        <p data-i18n="aboutText2">
                             Meu nivel intermediario de ingles me permite comunicar-me efetivamente em um ambiente de
                             trabalho internacional.
                             Estou sempre buscando aprender mais sobre as ultimas tecnologias e interessado em trabalhar
@@ -86,21 +93,21 @@
                     <div class="sobre__cards">
                         <div class="info-card">
                             <span class="info-card__icone">🎓</span>
-                            <h3 class="info-card__titulo">Formacao</h3>
-                            <p class="info-card__texto">Engenharia de Software - SATC</p>
-                            <span class="info-card__periodo">2022 - Presente</span>
+                            <h3 class="info-card__titulo" data-i18n="education">Formacao</h3>
+                            <p class="info-card__texto" data-i18n="educationTitle">Engenharia de Software - SATC</p>
+                            <span class="info-card__periodo" data-i18n="educationPeriod">2022 - Presente</span>
                         </div>
                         <div class="info-card">
                             <span class="info-card__icone">💼</span>
-                            <h3 class="info-card__titulo">Experiencia</h3>
-                            <p class="info-card__texto">Desenvolvedor de Extensões</p>
-                            <span class="info-card__periodo">Betha Sistemas</span>
+                            <h3 class="info-card__titulo" data-i18n="experience">Experiencia</h3>
+                            <p class="info-card__texto" data-i18n="experienceTitle">Desenvolvedor de Extensões</p>
+                            <span class="info-card__periodo" data-i18n="experienceCompany">Betha Sistemas</span>
                         </div>
                         <div class="info-card">
                             <span class="info-card__icone">🌍</span>
-                            <h3 class="info-card__titulo">Idiomas</h3>
-                            <p class="info-card__texto">Portugues (Nativo)</p>
-                            <span class="info-card__periodo">Ingles (Intermediario)</span>
+                            <h3 class="info-card__titulo" data-i18n="languages">Idiomas</h3>
+                            <p class="info-card__texto" data-i18n="languagesText">Portugues (Nativo)</p>
+                            <span class="info-card__periodo" data-i18n="languagesPeriod">Ingles (Intermediario)</span>
                         </div>
                     </div>
                 </div>
@@ -110,10 +117,10 @@
         <!-- Habilidades Section -->
         <section id="habilidades" class="secao secao--alt">
             <div class="secao__container">
-                <h2 class="secao__titulo">Habilidades</h2>
+                <h2 class="secao__titulo" data-i18n="skillsTitle">Habilidades</h2>
                 <div class="habilidades__grid">
                     <div class="habilidade-grupo">
-                        <h3 class="habilidade-grupo__titulo">Linguagens</h3>
+                        <h3 class="habilidade-grupo__titulo" data-i18n="languagesGroup">Linguagens</h3>
                         <div class="tags">
                             <span class="tag">JavaScript</span>
                             <span class="tag">Java</span>
@@ -122,7 +129,7 @@
                         </div>
                     </div>
                     <div class="habilidade-grupo">
-                        <h3 class="habilidade-grupo__titulo">Front-end</h3>
+                        <h3 class="habilidade-grupo__titulo" data-i18n="frontendGroup">Front-end</h3>
                         <div class="tags">
                             <span class="tag">HTML5</span>
                             <span class="tag">CSS3</span>
@@ -130,7 +137,7 @@
                         </div>
                     </div>
                     <div class="habilidade-grupo">
-                        <h3 class="habilidade-grupo__titulo">Ferramentas</h3>
+                        <h3 class="habilidade-grupo__titulo" data-i18n="toolsGroup">Ferramentas</h3>
                         <div class="tags">
                             <span class="tag">Git</span>
                             <span class="tag">GitHub</span>
@@ -139,7 +146,7 @@
                         </div>
                     </div>
                     <div class="habilidade-grupo">
-                        <h3 class="habilidade-grupo__titulo">Metodologias</h3>
+                        <h3 class="habilidade-grupo__titulo" data-i18n="methodologiesGroup">Metodologias</h3>
                         <div class="tags">
                             <span class="tag">Scrum</span>
                             <span class="tag">Kanban</span>
@@ -148,7 +155,7 @@
                     </div>
                 </div>
 
-                <h3 class="secao__subtitulo">Certificacoes</h3>
+                <h3 class="secao__subtitulo" data-i18n="certificationsTitle">Certificacoes</h3>
                 <div class="certificacoes__grid">
                     <div class="certificacao">
                         <span class="certificacao__badge">SATC</span>
@@ -181,7 +188,7 @@
         <!-- Projetos Section -->
         <section id="projetos" class="secao">
             <div class="secao__container">
-                <h2 class="secao__titulo">Projetos</h2>
+                <h2 class="secao__titulo" data-i18n="projectsTitle">Projetos</h2>
                 <div class="projetos__grid">
                     <article class="projeto-card">
                         <div class="projeto-card__header">
@@ -191,8 +198,8 @@
                                     rel="noopener noreferrer" class="projeto-card__link">GitHub</a>
                             </div>
                         </div>
-                        <h3 class="projeto-card__titulo">EncodeHub 2.0</h3>
-                        <p class="projeto-card__descricao">
+                        <h3 class="projeto-card__titulo" data-i18n="encodeHubTitle">EncodeHub 2.0</h3>
+                        <p class="projeto-card__descricao" data-i18n="encodeHubDesc">
                             Plataforma web com ferramentas para desenvolvedores: conversao e formatacao de dados
                             entre formatos como JSON, XML, YAML, Base64 e binario. Geracao de hashes criptograficos.
                         </p>
@@ -212,8 +219,8 @@
                                     rel="noopener noreferrer" class="projeto-card__link">GitHub</a>
                             </div>
                         </div>
-                        <h3 class="projeto-card__titulo">Vite Market List</h3>
-                        <p class="projeto-card__descricao">
+                        <h3 class="projeto-card__titulo" data-i18n="viteMarketTitle">Vite Market List</h3>
+                        <p class="projeto-card__descricao" data-i18n="viteMarketDesc">
                             Aplicacao web para gerenciamento de lista de compras, desenvolvida com JavaScript e Vite
                             para otimizacao de performance e experiencia de desenvolvimento.
                         </p>
@@ -231,13 +238,13 @@
                                     class="projeto-card__link">GitHub</a>
                             </div>
                         </div>
-                        <h3 class="projeto-card__titulo">Mais Projetos</h3>
-                        <p class="projeto-card__descricao">
+                        <h3 class="projeto-card__titulo" data-i18n="projectsViewMore">Mais Projetos</h3>
+                        <p class="projeto-card__descricao" data-i18n="projectsDescription">
                             Confira outros projetos e contribuicoes no meu perfil do GitHub.
                             Sempre trabalhando em algo novo e interessante.
                         </p>
                         <div class="projeto-card__tags">
-                            <span class="projeto-card__tag">Ver Todos</span>
+                            <span class="projeto-card__tag" data-i18n="projectsViewMore">Ver Todos</span>
                         </div>
                     </article>
                 </div>
@@ -247,8 +254,8 @@
         <!-- Contato Section -->
         <section id="contato" class="secao secao--alt">
             <div class="secao__container secao__container--center">
-                <h2 class="secao__titulo">Vamos Conversar?</h2>
-                <p class="contato__texto">
+                <h2 class="secao__titulo" data-i18n="contactTitle">Vamos Conversar?</h2>
+                <p class="contato__texto" data-i18n="contactText">
                     Estou sempre aberto a novas oportunidades e projetos interessantes.
                     Entre em contato atraves das minhas redes sociais.
                 </p>
@@ -269,7 +276,7 @@
     </main>
 
     <footer class="rodape">
-        <p>Desenvolvido por <span class="destaque">Luiz Miguel</span> - 2024</p>
+        <p data-i18n="footer">Desenvolvido por <span class="destaque">Luiz Miguel</span> - 2024</p>
     </footer>
 </body>
 
