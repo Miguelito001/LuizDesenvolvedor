@@ -47,6 +47,38 @@ body {
     z-index: 1000;
 }
 
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--cor-bg-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 0.5rem;
+}
+
+.language-switcher__btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    color: var(--cor-texto-secundario);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.language-switcher__btn:hover {
+    color: var(--cor-primaria);
+}
+
+.language-switcher__btn--active {
+    background-color: var(--cor-primaria);
+    color: var(--cor-bg);
+}
+
 .cabecalho__logo {
     font-family: var(--fonte-mono);
     font-size: 1.5rem;
