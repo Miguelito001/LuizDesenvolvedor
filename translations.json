@@ -40,7 +40,9 @@
     "encodeHubDesc": "Plataforma web com ferramentas para desenvolvedores: conversao e formatacao de dados entre formatos como JSON, XML, YAML, Base64 e binario. Geracao de hashes criptograficos.",
     "viteMarketTitle": "Vite Market List",
     "viteMarketDesc": "Aplicacao web para gerenciamento de lista de compras, desenvolvida com JavaScript e Vite para otimizacao de performance e experiencia de desenvolvimento.",
-    "availableForOpportunities": "Disponivel para oportunidades"
+    "availableForOpportunities": "Disponivel para oportunidades",
+    "credlyBadgesTitle": "Badges Verificados",
+    "credlyBadgesDesc": "Conquistas e certificações verificadas pela plataforma Credly."
   },
   "en": {
     "home": "Home",
@@ -83,6 +85,8 @@
     "encodeHubDesc": "Web platform with tools for developers: data conversion and formatting between formats such as JSON, XML, YAML, Base64 and binary. Generation of cryptographic hashes.",
     "viteMarketTitle": "Vite Market List",
     "viteMarketDesc": "Web application for managing shopping lists, developed with JavaScript and Vite for performance optimization and development experience.",
-    "availableForOpportunities": "Available for opportunities"
+    "availableForOpportunities": "Available for opportunities",
+    "credlyBadgesTitle": "Verified Badges",
+    "credlyBadgesDesc": "Achievements and certifications verified by the Credly platform."
   }
 }

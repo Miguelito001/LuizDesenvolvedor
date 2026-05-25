@@ -565,6 +565,76 @@ body {
     filter: brightness(0) invert(1);
 }
 
+/* Credly Badges */
+.credly-wrapper {
+    margin-top: 3rem;
+}
+
+.credly-descricao {
+    font-size: 0.95rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 1.5rem;
+}
+
+.credly-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.credly-card {
+    background-color: var(--cor-bg-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.credly-card:hover {
+    border-color: var(--cor-primaria);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 255, 136, 0.08);
+}
+
+.credly-card__header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.credly-card__icon {
+    font-size: 1.1rem;
+}
+
+.credly-card__label {
+    font-family: var(--fonte-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex: 1;
+}
+
+.credly-card__external {
+    color: var(--cor-texto-secundario);
+    transition: color 0.3s ease;
+}
+
+.credly-card:hover .credly-card__external {
+    color: var(--cor-primaria);
+}
+
+.credly-card__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 /* Footer */
 .rodape {
     padding: 2rem 5%;
