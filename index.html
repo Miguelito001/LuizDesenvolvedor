@@ -1,303 +1,67 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Luiz Miguel - Engenheiro de Software na Betha Sistemas. Portfolio profissional com projetos, habilidades e experiencia.">
-    <meta name="keywords" content="Engenheiro de Software, Desenvolvedor, JavaScript, Java, C#, Criciuma">
-    <meta name="author" content="Luiz Miguel">
-    <link rel="icon" type="image/png" href="./assets/github.png">
-    <title>Luiz Miguel | Engenheiro de Software</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <script src="./i18n.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Luiz Miguel Rosso Formigoni, desenvolvedor de software focado em extensões, integrações, automação e produtos web.">
+  <meta name="keywords" content="Desenvolvedor de Software, Groovy, SQL, APIs REST, Extensões Chrome, TypeScript, Next.js">
+  <meta name="author" content="Luiz Miguel Rosso Formigoni">
+  <meta name="theme-color" content="#070b0a">
+  <meta property="og:title" content="Luiz Miguel | Desenvolvedor de Software">
+  <meta property="og:description" content="Extensões, integrações, automação e produtos web construídos para resolver problemas reais.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="./assets/github.png">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Luiz Miguel | Desenvolvedor de Software</title>
+  <script src="./i18n.js" defer></script>
 </head>
-
 <body>
-    <header class="cabecalho">
-        <a href="#home" class="cabecalho__logo">LM</a>
-        <div style="display: flex; align-items: center; gap: 2rem;">
-            <nav class="cabecalho__menu">
-                <a class="cabecalho__menu__link" href="#home" data-i18n="home">Home</a>
-                <a class="cabecalho__menu__link" href="#sobre" data-i18n="sobre">Sobre</a>
-                <a class="cabecalho__menu__link" href="#habilidades" data-i18n="habilidades">Habilidades</a>
-                <a class="cabecalho__menu__link" href="#projetos" data-i18n="projetos">Projetos</a>
-                <a class="cabecalho__menu__link" href="#contato" data-i18n="contato">Contato</a>
-            </nav>
-            <div class="language-switcher">
-                <button class="language-switcher__btn language-switcher__btn--active" data-lang="pt" onclick="setLanguage('pt')">PT</button>
-                <button class="language-switcher__btn" data-lang="en" onclick="setLanguage('en')">EN</button>
-            </div>
-        </div>
-    </header>
+  <a class="skip-link" href="#conteudo" data-i18n="skipContent">Pular para o conteúdo</a>
+  <header class="cabecalho">
+    <a href="#home" class="cabecalho__logo" aria-label="Início">LM<span>.</span></a>
+    <nav class="cabecalho__menu" aria-label="Navegação principal">
+      <a href="#sobre" data-i18n="sobre">Sobre</a><a href="#experiencia" data-i18n="experience">Experiência</a><a href="#projetos" data-i18n="projetos">Projetos</a><a href="#contato" data-i18n="contato">Contato</a>
+    </nav>
+    <div class="language-switcher" aria-label="Idioma"><button type="button" data-lang="pt" onclick="setLanguage('pt')" aria-label="Português">PT</button><button type="button" data-lang="en" onclick="setLanguage('en')" aria-label="English">EN</button></div>
+  </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero__conteudo">
-                <p class="hero__saudacao" data-i18n="heroGreeting">Ola, eu sou</p>
-                <h1 class="hero__titulo">Luiz Miguel</h1>
-                <h2 class="hero__subtitulo" data-i18n="heroSubtitle">Engenheiro de Software</h2>
-                <p class="hero__descricao" data-i18n="heroDescription">
-                    Desenvolvedor na <span class="destaque">Betha Sistemas</span>.
-                    Apaixonado por tecnologia e desenvolvimento de software.
-                </p>
-                <p class="hero__localizacao" data-i18n="heroLocation">Turvo, Santa Catarina - Brasil</p>
-                <div class="hero__botoes">
-                    <a href="#projetos" class="botao botao--primario" data-i18n="viewProjects">Ver Projetos</a>
-                    <a href="#contato" class="botao botao--secundario" data-i18n="contactBtn">Contato</a>
-                </div>
-            </div>
-            <div class="hero__visual">
-                <div class="hero__terminal">
-                    <div class="terminal__header">
-                        <span class="terminal__dot terminal__dot--red"></span>
-                        <span class="terminal__dot terminal__dot--yellow"></span>
-                        <span class="terminal__dot terminal__dot--green"></span>
-                    </div>
-                    <div class="terminal__body">
-                        <p><span class="terminal__prompt">$</span> whoami</p>
-                        <p class="terminal__output">luiz.miguel</p>
-                        <p><span class="terminal__prompt">$</span> cat skills.txt</p>
-                        <p class="terminal__output">JavaScript, Java, C#, SQL...</p>
-                        <p><span class="terminal__prompt">$</span> echo $STATUS</p>
-                        <p class="terminal__output terminal__output--green" data-i18n="availableForOpportunities">Disponivel para oportunidades</p>
-                        <p><span class="terminal__prompt">$</span> <span class="terminal__cursor">_</span></p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <main id="conteudo">
+    <section id="home" class="hero">
+      <div class="hero__conteudo">
+        <p class="eyebrow" data-i18n="heroEyebrow">DESENVOLVEDOR DE SOFTWARE</p>
+        <h1><span data-i18n="heroLine1">Eu construo software para</span> <span class="destaque" data-i18n="heroLine2">resolver problemas reais.</span></h1>
+        <p class="hero__descricao" data-i18n="heroDescription">Extensões, integrações, automação e produtos web. Trabalho com Groovy, SQL e APIs REST em sistemas corporativos e transformo necessidades próprias em ferramentas abertas para outras pessoas.</p>
+        <div class="hero__botoes"><a href="#projetos" class="botao botao--primario" data-i18n="viewProjects">Conhecer projetos</a><a href="https://github.com/Miguelito001" target="_blank" rel="noopener noreferrer" class="botao botao--secundario">GitHub ↗</a></div>
+        <ul class="hero__facts" aria-label="Resumo profissional"><li><strong>3+</strong><span data-i18n="yearsExperience">anos construindo software</span></li><li><strong>58</strong><span data-i18n="toolsPublished">ferramentas publicadas</span></li><li><strong>3</strong><span data-i18n="productsActive">produtos em evolução</span></li></ul>
+      </div>
+      <div class="hero__visual" aria-label="Resumo técnico">
+        <div class="terminal"><div class="terminal__bar"><span></span><span></span><span></span><small>luiz@portfolio:~</small></div><div class="terminal__body"><p><b>$</b> whoami</p><p class="terminal__output">Luiz Miguel Rosso Formigoni</p><p><b>$</b> cat foco.txt</p><p class="terminal__output">Groovy · SQL · REST APIs<br>Browser Extensions · TypeScript</p><p><b>$</b> ./principio</p><p class="terminal__output terminal__output--green" data-i18n="terminalPrinciple">entender a regra → construir a solução</p><p><b>$</b> <span class="terminal__cursor">_</span></p></div></div>
+      </div>
+    </section>
 
-        <!-- Sobre Section -->
-        <section id="sobre" class="secao">
-            <div class="secao__container">
-                <h2 class="secao__titulo" data-i18n="aboutTitle">Sobre Mim</h2>
-                <div class="sobre__grid">
-                    <div class="sobre__texto">
-                        <p data-i18n="aboutText1">
-                            Meu nome e Luiz Miguel e sou Desenvolvedor de Software com forte interesse em videogames,
-                            atualmente morando em Turvo. Minha paixao por videogames me levou a escolher a engenharia de
-                            software
-                            como minha area de estudo.
-                        </p>
-                        <p data-i18n="aboutText2">
-                            Meu nivel intermediario de ingles me permite comunicar-me efetivamente em um ambiente de
-                            trabalho internacional.
-                            Estou sempre buscando aprender mais sobre as ultimas tecnologias e interessado em trabalhar
-                            em um ambiente
-                            desafiador e inovador.
-                        </p>
-                    </div>
-                    <div class="sobre__cards">
-                        <div class="info-card">
-                            <span class="info-card__icone">🎓</span>
-                            <h3 class="info-card__titulo" data-i18n="education">Formacao</h3>
-                            <p class="info-card__texto" data-i18n="educationTitle">Engenharia de Software - SATC</p>
-                            <span class="info-card__periodo" data-i18n="educationPeriod">2022 - Presente</span>
-                        </div>
-                        <div class="info-card">
-                            <span class="info-card__icone">💼</span>
-                            <h3 class="info-card__titulo" data-i18n="experience">Experiencia</h3>
-                            <p class="info-card__texto" data-i18n="experienceTitle">Desenvolvedor de Extensões</p>
-                            <span class="info-card__periodo" data-i18n="experienceCompany">Betha Sistemas</span>
-                        </div>
-                        <div class="info-card">
-                            <span class="info-card__icone">🌍</span>
-                            <h3 class="info-card__titulo" data-i18n="languages">Idiomas</h3>
-                            <p class="info-card__texto" data-i18n="languagesText">Portugues (Nativo)</p>
-                            <span class="info-card__periodo" data-i18n="languagesPeriod">Ingles (Intermediario)</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <section id="sobre" class="secao"><div class="secao__container grid-intro"><div><p class="eyebrow" data-i18n="aboutEyebrow">COMO EU TRABALHO</p><h2 data-i18n="aboutTitle">Código começa na regra, não no teclado.</h2></div><div class="texto-editorial"><p data-i18n="aboutText1">Atuo no desenvolvimento e manutenção de extensões, relatórios e integrações para sistemas corporativos. Meu trabalho passa por entender regras de negócio, investigar dados, diagnosticar falhas e entregar soluções que continuem compreensíveis depois que o problema acaba.</p><p data-i18n="aboutText2">Fora do trabalho, construo produtos próprios. Eles são meu laboratório para arquitetura, experiência de usuário, segurança, testes e evolução contínua — sempre partindo de uma necessidade concreta.</p></div></div></section>
 
-        <!-- Habilidades Section -->
-        <section id="habilidades" class="secao secao--alt">
-            <div class="secao__container">
-                <h2 class="secao__titulo" data-i18n="skillsTitle">Habilidades</h2>
-                <div class="habilidades__grid">
-                    <div class="habilidade-grupo">
-                        <h3 class="habilidade-grupo__titulo" data-i18n="languagesGroup">Linguagens</h3>
-                        <div class="tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Java</span>
-                            <span class="tag">C#</span>
-                            <span class="tag">SQL</span>
-                        </div>
-                    </div>
-                    <div class="habilidade-grupo">
-                        <h3 class="habilidade-grupo__titulo" data-i18n="frontendGroup">Front-end</h3>
-                        <div class="tags">
-                            <span class="tag">HTML5</span>
-                            <span class="tag">CSS3</span>
-                            <span class="tag">Responsive Design</span>
-                        </div>
-                    </div>
-                    <div class="habilidade-grupo">
-                        <h3 class="habilidade-grupo__titulo" data-i18n="toolsGroup">Ferramentas</h3>
-                        <div class="tags">
-                            <span class="tag">Git</span>
-                            <span class="tag">GitHub</span>
-                            <span class="tag">Vite</span>
-                            <span class="tag">Vercel</span>
-                        </div>
-                    </div>
-                    <div class="habilidade-grupo">
-                        <h3 class="habilidade-grupo__titulo" data-i18n="methodologiesGroup">Metodologias</h3>
-                        <div class="tags">
-                            <span class="tag">Scrum</span>
-                            <span class="tag">Kanban</span>
-                            <span class="tag">Agile</span>
-                        </div>
-                    </div>
-                </div>
+    <section id="experiencia" class="secao secao--alt"><div class="secao__container">
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="experienceEyebrow">EXPERIÊNCIA E FERRAMENTAS</p><h2 data-i18n="experienceTitle">Software usado por pessoas reais.</h2></div><p data-i18n="experienceSummary">Na Betha Sistemas, evoluí de estágio para desenvolvimento de extensões, ampliando minha atuação em regras de negócio, dados, relatórios e integrações.</p></div>
+      <div class="experience-layout">
+        <article class="timeline-card"><div class="timeline-card__head"><div><span class="status-dot"></span><strong>Betha Sistemas</strong></div><span>2023 → <span data-i18n="present">presente</span></span></div><h3 data-i18n="currentRole">Desenvolvedor de Extensões Júnior</h3><p data-i18n="currentRoleText">Análise de regras de negócio, desenvolvimento de extensões e relatórios, integrações via API REST, tratamento de dados e investigação de problemas em sistemas corporativos.</p><ul class="proof-list"><li data-i18n="proof1">Evolução e manutenção de soluções utilizadas por múltiplos clientes.</li><li data-i18n="proof2">Diagnóstico de inconsistências entre dados, integrações e relatórios.</li><li data-i18n="proof3">Código organizado para reutilização e manutenção pelo time.</li></ul></article>
+        <div class="stack-grid"><article><span>01</span><h3 data-i18n="stackBackend">Backend & automação</h3><p>Groovy · Python · REST APIs</p></article><article><span>02</span><h3 data-i18n="stackData">Dados & relatórios</h3><p>SQL · PostgreSQL · MongoDB · Jaspersoft</p></article><article><span>03</span><h3 data-i18n="stackWeb">Produtos web</h3><p>TypeScript · Next.js · React · Supabase</p></article><article><span>04</span><h3 data-i18n="stackExtensions">Extensões</h3><p>Chrome MV3 · Content Scripts · Storage</p></article></div>
+      </div>
+    </div></section>
 
-                <h3 class="secao__subtitulo" data-i18n="certificationsTitle">Certificacoes</h3>
-                <div class="certificacoes__grid">
-                    <div class="certificacao">
-                        <span class="certificacao__badge">SATC</span>
-                        <span class="certificacao__nome">ESPECIALISTA EM REQUISITOS DE SOFTWARE</span>
-                    </div>
-                    <div class="certificacao">
-                        <span class="certificacao__badge">MongoDB</span>
-                        <span class="certificacao__nome">MongoDB PHP Developer Path</span>
-                    </div>
-                    <div class="certificacao">
-                        <span class="certificacao__badge">Alura</span>
-                        <span class="certificacao__nome">Machine Learning: classificação com SKLearn</span>
-                    </div>
-                    <div class="certificacao">
-                        <span class="certificacao__badge">Alura</span>
-                        <span class="certificacao__nome">C#: Dominando Orientação a Objetos</span>
-                    </div>
-                    <div class="certificacao">
-                        <span class="certificacao__badge">MongoDB</span>
-                        <span class="certificacao__nome">MongoDB Java Developer Path</span>
-                    </div>
-                    <div class="certificacao">
-                        <span class="certificacao__badge">DIO</span>
-                        <span class="certificacao__nome">Arquitetura de Dados Essencial</span>
-                    </div>
-                </div>
+    <section id="projetos" class="secao projetos"><div class="secao__container">
+      <div class="section-heading"><div><p class="eyebrow" data-i18n="projectsEyebrow">PROJETOS EM PRODUÇÃO</p><h2 data-i18n="projectsTitle">Produtos, não exercícios.</h2></div><p data-i18n="projectsSummary">Três projetos que demonstram produto, arquitetura e evolução: uma plataforma de ferramentas, uma extensão de navegador e um sistema adaptativo de japonês.</p></div>
+      <div class="case-list">
+        <article class="case-card case-card--primary"><div class="case-card__number">01</div><div class="case-card__content"><div class="case-card__meta"><span>PRODUTO WEB</span><span>58 TOOLS</span></div><h3>NoClipCode</h3><p data-i18n="noclipDescription">Caixa de ferramentas para desenvolvedores com processamento 100% local. Conversão, arquivos, PDFs, imagens, QR Codes, segurança, dados e utilitários de frontend reunidos em uma experiência rápida.</p><ul class="case-card__proofs"><li data-i18n="noclipProof1">Arquitetura modular com Next.js, React e TypeScript.</li><li data-i18n="noclipProof2">84 testes e proteções para conteúdo, regex e arquivos.</li><li data-i18n="noclipProof3">Privacidade por design: os dados não saem do navegador.</li></ul><div class="case-card__tags"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Web APIs</span></div><div class="case-card__links"><a href="https://www.noclipcode.com" target="_blank" rel="noopener noreferrer" data-i18n="openProduct">Abrir produto ↗</a><a href="https://github.com/Miguelito001/NoClipCode" target="_blank" rel="noopener noreferrer">Código ↗</a></div></div></article>
+        <article class="case-card"><div class="case-card__number">02</div><div class="case-card__content"><div class="case-card__meta"><span>CHROME EXTENSION</span><span>MV3</span></div><h3>NoClipExtension</h3><p data-i18n="extensionDescription">Extensão de produtividade que expande snippets enquanto o usuário digita e oferece ferramentas rápidas dentro do navegador.</p><ul class="case-card__proofs"><li data-i18n="extensionProof1">Suporte a inputs, textareas, contenteditable, iframes e CodeMirror.</li><li data-i18n="extensionProof2">Persistência local e processamento sem envio de conteúdo.</li><li data-i18n="extensionProof3">Publicada e evoluída como parte do ecossistema NoClip.</li></ul><div class="case-card__tags"><span>JavaScript</span><span>Chrome MV3</span><span>Content Scripts</span><span>Storage</span></div><div class="case-card__links"><a href="https://github.com/Miguelito001/NoClipExtension" target="_blank" rel="noopener noreferrer">Código ↗</a></div></div></article>
+        <article class="case-card"><div class="case-card__number">03</div><div class="case-card__content"><div class="case-card__meta"><span>LEARNING SYSTEM</span><span>ADAPTIVE</span></div><h3>かな。</h3><p data-i18n="kanaDescription">Sistema adaptativo para estudar japonês com treino de escrita, vocabulário, gramática, escuta e leitura, evoluindo de ferramenta de estudo para desafio.</p><ul class="case-card__proofs"><li data-i18n="kanaProof1">Sincronização multidispositivo, sessões e histórico com Supabase.</li><li data-i18n="kanaProof2">Mastery, retenção, repetição adaptativa e modos endgame.</li><li data-i18n="kanaProof3">Arquitetura offline-first, migrations e testes automatizados.</li></ul><div class="case-card__tags"><span>JavaScript</span><span>Supabase</span><span>Offline-first</span><span>RLS</span></div><div class="case-card__links"><a href="https://kana-treino-rapido.software-rosso.chatgpt.site" target="_blank" rel="noopener noreferrer" data-i18n="openProduct">Abrir produto ↗</a><a href="https://github.com/Miguelito001/kana" target="_blank" rel="noopener noreferrer">Código ↗</a></div></div></article>
+      </div>
+    </div></section>
 
-                <div class="credly-wrapper">
-                    <h3 class="secao__subtitulo" data-i18n="credlyBadgesTitle">Badges Verificados</h3>
-                    <p class="credly-descricao" data-i18n="credlyBadgesDesc">Conquistas e certificações verificadas pela plataforma Credly.</p>
-                    <a href="https://www.credly.com/users/luiz-miguel-rosso-formigoni/badges" target="_blank" rel="noopener noreferrer" class="credly-link">
-                        <div class="credly-card">
-                            <div class="credly-card__header">
-                                <span class="credly-card__icon">🏅</span>
-                                <span class="credly-card__label">Credly</span>
-                                <svg class="credly-card__external" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                            </div>
-                            <img
-                                src="https://credly-readme-stats.onrender.com/api/overview?username=Miguelito001&theme=github_dark"
-                                alt="Badges do Credly de Luiz Miguel"
-                                class="credly-card__img"
-                                loading="lazy"
-                            />
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <section class="secao secao--alt"><div class="secao__container principles"><div><p class="eyebrow" data-i18n="principlesEyebrow">PRINCÍPIOS</p><h2 data-i18n="principlesTitle">O que direciona minhas decisões.</h2></div><div class="principles__grid"><article><span>01</span><h3 data-i18n="principle1Title">Problema antes da tecnologia</h3><p data-i18n="principle1Text">A ferramenta existe para resolver a regra — não o contrário.</p></article><article><span>02</span><h3 data-i18n="principle2Title">Privacidade como arquitetura</h3><p data-i18n="principle2Text">Quando o dado não precisa sair do dispositivo, ele permanece no dispositivo.</p></article><article><span>03</span><h3 data-i18n="principle3Title">Código que continua legível</h3><p data-i18n="principle3Text">Uma solução só termina quando outra pessoa consegue entendê-la e evoluí-la.</p></article></div></div></section>
 
-        <!-- Projetos Section -->
-        <section id="projetos" class="secao">
-            <div class="secao__container">
-                <h2 class="secao__titulo" data-i18n="projectsTitle">Projetos</h2>
-                <div class="projetos__grid">
-                    <article class="projeto-card">
-                        <div class="projeto-card__header">
-                            <span class="projeto-card__icone">&#60;/&#62;</span>
-                            <div class="projeto-card__links">
-                                <a href="https://github.com/Miguelito001/NoClipCode" target="_blank"
-                                    rel="noopener noreferrer" class="projeto-card__link">GitHub</a>
-                            </div>
-                        </div>
-                        <h3 class="projeto-card__titulo" data-i18n="encodeHubTitle">NoClipCode</h3>
-                        <p class="projeto-card__descricao" data-i18n="encodeHubDesc">
-                            Plataforma web com ferramentas para desenvolvedores: conversao e formatacao de dados
-                            entre formatos como JSON, XML, YAML, Base64 e binario. Geracao de hashes criptograficos.
-                        </p>
-                        <div class="projeto-card__tags">
-                            <span class="projeto-card__tag">HTML5</span>
-                            <span class="projeto-card__tag">CSS3</span>
-                            <span class="projeto-card__tag">JavaScript</span>
-                            <span class="projeto-card__tag">Vercel</span>
-                        </div>
-                    </article>
-
-                    <article class="projeto-card">
-                        <div class="projeto-card__header">
-                            <span class="projeto-card__icone">&#60;/&#62;</span>
-                            <div class="projeto-card__links">
-                                <a href="https://github.com/Miguelito001/vite_market_list" target="_blank"
-                                    rel="noopener noreferrer" class="projeto-card__link">GitHub</a>
-                            </div>
-                        </div>
-                        <h3 class="projeto-card__titulo" data-i18n="viteMarketTitle">Vite Market List</h3>
-                        <p class="projeto-card__descricao" data-i18n="viteMarketDesc">
-                            Aplicacao web para gerenciamento de lista de compras, desenvolvida com JavaScript e Vite
-                            para otimizacao de performance e experiencia de desenvolvimento.
-                        </p>
-                        <div class="projeto-card__tags">
-                            <span class="projeto-card__tag">JavaScript</span>
-                            <span class="projeto-card__tag">Vite</span>
-                        </div>
-                    </article>
-
-                    <article class="projeto-card">
-                        <div class="projeto-card__header">
-                            <span class="projeto-card__icone">&#60;/&#62;</span>
-                            <div class="projeto-card__links">
-                                <a href="https://github.com/Miguelito001" target="_blank" rel="noopener noreferrer"
-                                    class="projeto-card__link">GitHub</a>
-                            </div>
-                        </div>
-                        <h3 class="projeto-card__titulo" data-i18n="projectsViewMore">Mais Projetos</h3>
-                        <p class="projeto-card__descricao" data-i18n="projectsDescription">
-                            Confira outros projetos e contribuicoes no meu perfil do GitHub.
-                            Sempre trabalhando em algo novo e interessante.
-                        </p>
-                        <div class="projeto-card__tags">
-                            <span class="projeto-card__tag" data-i18n="projectsViewMore">Ver Todos</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contato Section -->
-        <section id="contato" class="secao secao--alt">
-            <div class="secao__container secao__container--center">
-                <h2 class="secao__titulo" data-i18n="contactTitle">Vamos Conversar?</h2>
-                <p class="contato__texto" data-i18n="contactText">
-                    Estou sempre aberto a novas oportunidades e projetos interessantes.
-                    Entre em contato atraves das minhas redes sociais.
-                </p>
-                <div class="contato__links">
-                    <a href="https://github.com/Miguelito001" target="_blank" rel="noopener noreferrer"
-                        class="contato__link">
-                        <img src="./assets/github.png" alt="GitHub">
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/miguelito001/" target="_blank" rel="noopener noreferrer"
-                        class="contato__link">
-                        <img src="./assets/linkedin.png" alt="LinkedIn">
-                        <span>LinkedIn</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="rodape">
-        <p data-i18n="footer">Desenvolvido por <span class="destaque">Luiz Miguel</span> - 2024</p>
-    </footer>
+    <section id="contato" class="secao contato"><div class="secao__container contato__container"><p class="eyebrow" data-i18n="contactEyebrow">CONTATO</p><h2 data-i18n="contactTitle">Quer conversar sobre software, produto ou uma oportunidade?</h2><p data-i18n="contactText">Você pode conhecer o código, acompanhar os projetos ou falar comigo diretamente pelo LinkedIn.</p><div class="contato__links"><a href="https://www.linkedin.com/in/miguelrosso" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/Miguelito001" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:software.rosso@gmail.com">software.rosso@gmail.com ↗</a></div></div></section>
+  </main>
+  <footer class="rodape"><span>Luiz Miguel Rosso Formigoni</span><span data-i18n="footer">Software para problemas reais · 2026</span></footer>
 </body>
-
 </html>
